@@ -254,7 +254,6 @@ function uploadReport() {
     fetch(`${BACKEND_URL}/upload`, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
             "X-USER-ID": userId
         },
         body: formData
