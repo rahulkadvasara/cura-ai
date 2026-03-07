@@ -5,6 +5,8 @@ from agents.coordinator_agent import CoordinatorAgent
 from scheduler.reminder_scheduler import start_scheduler
 from database.db import init_db, get_connection
 from werkzeug.utils import secure_filename
+from utils.crypto_utils import decrypt_data
+from utils.auth_utils import verify_user_access
 import os
 import traceback
 import sqlite3
@@ -58,7 +60,11 @@ def chat():
 
         data = request.get_json()
 
-        user_id = data.get("user_id", 1)
+        user_id = data.get("user_id")
+        session_user = request.headers.get("X-USER-ID")
+
+        verify_user_access(user_id, session_user)
+
         user_input = data.get("message")
         image_path = data.get("image_path")
 
@@ -193,7 +199,10 @@ def login():
 
 @app.route("/get_reminders", methods=["GET"])
 def get_reminders():
-    user_id = int(request.args.get("user_id"))
+    # user_id = int(request.args.get("user_id"))
+    user_id = request.args.get("user_id")
+    session_user = request.headers.get("X-USER-ID")
+    verify_user_access(user_id, session_user)
 
     conn = get_connection()
     reminders = conn.execute(
@@ -206,7 +215,7 @@ def get_reminders():
         "reminders": [
             {
                 "id": r["id"],
-                "medicine": r["medicine"],
+                "medicine": decrypt_data(r["medicine"]),
                 "time": r["time"]
             }
             for r in reminders
@@ -218,11 +227,26 @@ def get_reminders():
 @app.route("/delete_reminder/<int:reminder_id>", methods=["DELETE"])
 def delete_reminder(reminder_id):
 
+    session_user = request.headers.get("X-USER-ID")
+
     conn = get_connection()
+
+    reminder = conn.execute(
+        "SELECT user_id FROM reminders WHERE id=?",
+        (reminder_id,)
+    ).fetchone()
+
+    if not reminder:
+        conn.close()
+        return jsonify({"error": "Reminder not found"}), 404
+
+    verify_user_access(reminder["user_id"], session_user)
+
     conn.execute(
-        "DELETE FROM reminders WHERE id = ?",
+        "DELETE FROM reminders WHERE id=?",
         (reminder_id,)
     )
+
     conn.commit()
     conn.close()
 

@@ -164,3 +164,126 @@ Metformin and Warfarin may have a moderate interaction risk due to the increased
 2026-03-07 16:42:06,930 - INFO - 127.0.0.1 - - [07/Mar/2026 16:42:06] "GET /get_reminders?user_id=1 HTTP/1.1" 200 -
 2026-03-07 16:42:57,977 - INFO - Reminder email sent to user 1
 2026-03-07 16:58:50,315 - INFO - 127.0.0.1 - - [07/Mar/2026 16:58:50] "GET /get_reminders?user_id=1 HTTP/1.1" 200 -
+2026-03-07 17:54:42,856 - INFO - NumExpr defaulting to 8 threads.
+2026-03-07 17:54:43,188 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-07 17:54:43,188 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-07 17:55:25,598 - INFO - 127.0.0.1 - - [07/Mar/2026 17:55:25] "OPTIONS /login HTTP/1.1" 200 -
+2026-03-07 17:55:25,987 - INFO - 127.0.0.1 - - [07/Mar/2026 17:55:25] "POST /login HTTP/1.1" 200 -
+2026-03-07 17:55:40,598 - INFO - 127.0.0.1 - - [07/Mar/2026 17:55:40] "POST /upload HTTP/1.1" 200 -
+2026-03-07 17:55:40,604 - INFO - 127.0.0.1 - - [07/Mar/2026 17:55:40] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-07 17:55:40,608 - INFO - User 1 input: Analyze this report
+2026-03-07 17:55:40,609 - INFO - Memory fetched for user 1 | Medicines: ['Metformin', 'Metformin', 'Warfarin', 'Warfarin', 'Metformin', 'Set reminder for Paracetamol', 'Aspirin', 'Add Vitamin D reminder', 'I need to take Insulin', 'Remind me of Aspirin', 'Wh', 'Warfarin', 'Remind me for Aspirin', 'Remind me for Aspirin', 'Aspirin', 'Remind me for Warfarin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin']
+2026-03-07 17:55:40,610 - INFO - Detected intent: REPORT
+2026-03-07 17:55:40,610 - INFO - Routing to ReportAgent
+2026-03-07 17:55:42,283 - INFO - Response generated successfully
+2026-03-07 17:55:42,283 - INFO - 127.0.0.1 - - [07/Mar/2026 17:55:42] "POST /chat HTTP/1.1" 200 -
+2026-03-07 17:56:33,926 - INFO - 127.0.0.1 - - [07/Mar/2026 17:56:33] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-07 17:56:33,934 - INFO - User 1 input: Remind me to take Aspirin at 05:57 PM
+2026-03-07 17:56:33,934 - INFO - Memory fetched for user 1 | Medicines: ['Metformin', 'Metformin', 'Warfarin', 'Warfarin', 'Metformin', 'Set reminder for Paracetamol', 'Aspirin', 'Add Vitamin D reminder', 'I need to take Insulin', 'Remind me of Aspirin', 'Wh', 'Warfarin', 'Remind me for Aspirin', 'Remind me for Aspirin', 'Aspirin', 'Remind me for Warfarin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin']
+2026-03-07 17:56:33,934 - INFO - Detected intent: REMINDER
+2026-03-07 17:56:34,721 - INFO - Drug interaction result: Interaction Risk: Moderate
+Metformin and Warfarin may interact, increasing the risk of bleeding due to Warfarin's anticoagulant effects, which can be exacerbated by Metformin's potential to increase INR levels.
+2026-03-07 17:56:34,721 - INFO - Moderate interaction detected, scheduling with warning.
+2026-03-07 17:56:34,785 - INFO - Response generated successfully
+2026-03-07 17:56:34,785 - INFO - 127.0.0.1 - - [07/Mar/2026 17:56:34] "POST /chat HTTP/1.1" 200 -
+2026-03-07 17:56:40,573 - INFO - 127.0.0.1 - - [07/Mar/2026 17:56:40] "GET /get_reminders?user_id=1 HTTP/1.1" 200 -
+2026-03-07 17:57:46,399 - INFO - Reminder email sent to user 1
+2026-03-07 17:59:40,693 - INFO - 127.0.0.1 - - [07/Mar/2026 17:59:40] "GET /get_reminders?user_id=1 HTTP/1.1" 200 -
+2026-03-07 17:59:44,262 - INFO - 127.0.0.1 - - [07/Mar/2026 17:59:44] "OPTIONS /delete_reminder/38 HTTP/1.1" 200 -
+2026-03-07 17:59:44,281 - INFO - 127.0.0.1 - - [07/Mar/2026 17:59:44] "DELETE /delete_reminder/38 HTTP/1.1" 200 -
+2026-03-07 17:59:44,286 - INFO - 127.0.0.1 - - [07/Mar/2026 17:59:44] "GET /get_reminders?user_id=1 HTTP/1.1" 200 -
+2026-03-07 18:00:01,973 - INFO - 127.0.0.1 - - [07/Mar/2026 18:00:01] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-07 18:00:01,982 - INFO - User 1 input: Remind me to take Aspirin at 06:00 PM
+2026-03-07 18:00:01,984 - INFO - Memory fetched for user 1 | Medicines: ['Metformin', 'Metformin', 'Warfarin', 'Warfarin', 'Metformin', 'Set reminder for Paracetamol', 'Aspirin', 'Add Vitamin D reminder', 'I need to take Insulin', 'Remind me of Aspirin', 'Wh', 'Warfarin', 'Remind me for Aspirin', 'Remind me for Aspirin', 'Aspirin', 'Remind me for Warfarin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin', 'Aspirin']
+2026-03-07 18:00:01,984 - INFO - Detected intent: REMINDER
+2026-03-07 18:00:02,626 - INFO - Drug interaction result: Interaction Risk: Moderate
+Metformin and Warfarin have a moderate interaction risk due to the potential for increased risk of bleeding when taken together, as Metformin can increase the anticoagulant effect of Warfarin.
+2026-03-07 18:00:02,626 - INFO - Moderate interaction detected, scheduling with warning.
+2026-03-07 18:00:02,660 - INFO - Response generated successfully
+2026-03-07 18:00:02,661 - INFO - 127.0.0.1 - - [07/Mar/2026 18:00:02] "POST /chat HTTP/1.1" 200 -
+2026-03-07 18:00:05,503 - INFO - 127.0.0.1 - - [07/Mar/2026 18:00:05] "GET /get_reminders?user_id=1 HTTP/1.1" 200 -
+2026-03-07 18:00:49,529 - INFO - Reminder email sent to user 1
+2026-03-07 18:03:24,741 - INFO - 127.0.0.1 - - [07/Mar/2026 18:03:24] "OPTIONS /delete_reminder/39 HTTP/1.1" 200 -
+2026-03-07 18:03:24,755 - INFO - 127.0.0.1 - - [07/Mar/2026 18:03:24] "DELETE /delete_reminder/39 HTTP/1.1" 200 -
+2026-03-07 18:03:24,760 - INFO - 127.0.0.1 - - [07/Mar/2026 18:03:24] "GET /get_reminders?user_id=1 HTTP/1.1" 200 -
+2026-03-07 18:03:41,315 - INFO - NumExpr defaulting to 8 threads.
+2026-03-07 18:03:41,596 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-07 18:03:41,596 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-07 18:03:56,345 - INFO - 127.0.0.1 - - [07/Mar/2026 18:03:56] "OPTIONS /register HTTP/1.1" 200 -
+2026-03-07 18:03:56,760 - INFO - 127.0.0.1 - - [07/Mar/2026 18:03:56] "POST /register HTTP/1.1" 200 -
+2026-03-07 18:04:03,592 - INFO - 127.0.0.1 - - [07/Mar/2026 18:04:03] "OPTIONS /register HTTP/1.1" 200 -
+2026-03-07 18:04:04,020 - INFO - 127.0.0.1 - - [07/Mar/2026 18:04:04] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2026-03-07 18:04:09,279 - INFO - 127.0.0.1 - - [07/Mar/2026 18:04:09] "OPTIONS /register HTTP/1.1" 200 -
+2026-03-07 18:04:09,689 - INFO - 127.0.0.1 - - [07/Mar/2026 18:04:09] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2026-03-07 18:04:20,389 - INFO - 127.0.0.1 - - [07/Mar/2026 18:04:20] "OPTIONS /login HTTP/1.1" 200 -
+2026-03-07 18:04:20,799 - INFO - 127.0.0.1 - - [07/Mar/2026 18:04:20] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-03-07 18:04:25,689 - INFO - 127.0.0.1 - - [07/Mar/2026 18:04:25] "POST /login HTTP/1.1" 200 -
+2026-03-07 18:04:37,477 - INFO - 127.0.0.1 - - [07/Mar/2026 18:04:37] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:04:56,654 - INFO - 127.0.0.1 - - [07/Mar/2026 18:04:56] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-07 18:04:56,658 - INFO - User 4 input: Remind me to take Aspirin at 06:05 PM
+2026-03-07 18:04:56,659 - INFO - Memory fetched for user 4 | Medicines: []
+2026-03-07 18:04:56,660 - INFO - Detected intent: REMINDER
+2026-03-07 18:04:57,283 - INFO - Drug interaction result: Interaction Risk: Low
+Aspirin has a low risk of interaction with other medications, but it may increase the risk of bleeding when taken with anticoagulants or antiplatelet agents.
+2026-03-07 18:04:57,305 - INFO - Reminder safely scheduled for Aspirin at 06:05 PM
+2026-03-07 18:04:57,305 - INFO - Response generated successfully
+2026-03-07 18:04:57,306 - INFO - 127.0.0.1 - - [07/Mar/2026 18:04:57] "POST /chat HTTP/1.1" 200 -
+2026-03-07 18:05:00,237 - INFO - 127.0.0.1 - - [07/Mar/2026 18:05:00] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:05:44,661 - INFO - Reminder email sent to user 4
+2026-03-07 18:05:53,109 - INFO - 127.0.0.1 - - [07/Mar/2026 18:05:53] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-07 18:05:53,115 - INFO - User 4 input: Remind me to take Warfarin at 06:06 PM
+2026-03-07 18:05:53,117 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin']
+2026-03-07 18:05:53,117 - INFO - Detected intent: REMINDER
+2026-03-07 18:05:53,785 - INFO - Drug interaction result: Interaction Risk: High
+Aspirin can increase the risk of bleeding when taken with Warfarin, a blood thinner, due to their synergistic effects on platelet aggregation and coagulation pathways. This combination may lead to increased bruising, bleeding, or hemorrhage.
+2026-03-07 18:05:53,785 - INFO - Response generated successfully
+2026-03-07 18:05:53,787 - INFO - 127.0.0.1 - - [07/Mar/2026 18:05:53] "POST /chat HTTP/1.1" 200 -
+2026-03-07 18:05:56,549 - INFO - 127.0.0.1 - - [07/Mar/2026 18:05:56] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:06:07,388 - INFO - 127.0.0.1 - - [07/Mar/2026 18:06:07] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:12:31,852 - INFO - 127.0.0.1 - - [07/Mar/2026 18:12:31] "POST /upload HTTP/1.1" 200 -
+2026-03-07 18:12:31,862 - INFO - 127.0.0.1 - - [07/Mar/2026 18:12:31] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-07 18:12:31,865 - INFO - User 4 input: Analyze this report
+2026-03-07 18:12:31,865 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin']
+2026-03-07 18:12:31,869 - INFO - Detected intent: REPORT
+2026-03-07 18:12:31,869 - INFO - Routing to ReportAgent
+2026-03-07 18:12:33,539 - INFO - Response generated successfully
+2026-03-07 18:12:33,539 - INFO - 127.0.0.1 - - [07/Mar/2026 18:12:33] "POST /chat HTTP/1.1" 200 -
+2026-03-07 18:28:57,331 - INFO - 127.0.0.1 - - [07/Mar/2026 18:28:57] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-07 18:28:57,336 - INFO - User 4 input: Remind me to take Warfarin at 06:29 PM
+2026-03-07 18:28:57,336 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin']
+2026-03-07 18:28:57,336 - INFO - Detected intent: REMINDER
+2026-03-07 18:28:57,999 - INFO - Drug interaction result: Interaction Risk: High
+Aspirin can increase the anticoagulant effects of Warfarin, leading to an increased risk of bleeding. This is because both medications are anticoagulants, and combining them can result in excessive anticoagulation.
+2026-03-07 18:28:57,999 - INFO - Response generated successfully
+2026-03-07 18:28:57,999 - INFO - 127.0.0.1 - - [07/Mar/2026 18:28:57] "POST /chat HTTP/1.1" 200 -
+2026-03-07 18:29:07,059 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:07] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:29:07,066 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:07] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:29:14,623 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:14] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:29:14,629 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:14] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:29:16,485 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:16] "OPTIONS /delete_reminder/40 HTTP/1.1" 200 -
+2026-03-07 18:29:16,512 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:16] "DELETE /delete_reminder/40 HTTP/1.1" 200 -
+2026-03-07 18:29:16,532 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:16] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:29:28,284 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:28] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-07 18:29:28,292 - INFO - User 4 input: Remind me to take Warfarin at 06:30 PM
+2026-03-07 18:29:28,295 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin']
+2026-03-07 18:29:28,295 - INFO - Detected intent: REMINDER
+2026-03-07 18:29:28,939 - INFO - Drug interaction result: Interaction Risk: High
+Aspirin and Warfarin have a significant interaction due to their overlapping anticoagulant effects, which can increase the risk of bleeding complications. This interaction is particularly concerning in patients taking Warfarin, as Aspirin can further prolong bleeding time.
+2026-03-07 18:29:28,939 - INFO - Response generated successfully
+2026-03-07 18:29:28,939 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:28] "POST /chat HTTP/1.1" 200 -
+2026-03-07 18:29:36,030 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:36] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:29:36,032 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:36] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:29:53,284 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:53] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-07 18:29:53,292 - INFO - User 4 input: Remind me to take Aspirin at 06:30 PM
+2026-03-07 18:29:53,295 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin']
+2026-03-07 18:29:53,295 - INFO - Detected intent: REMINDER
+2026-03-07 18:29:53,903 - INFO - Drug interaction result: Interaction Risk: Low
+There is no significant interaction risk with the same medication taken in duplicate, as it is a single substance.
+2026-03-07 18:29:53,923 - INFO - Reminder safely scheduled for Aspirin at 06:30 PM
+2026-03-07 18:29:53,923 - INFO - Response generated successfully
+2026-03-07 18:29:53,926 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:53] "POST /chat HTTP/1.1" 200 -
+2026-03-07 18:29:56,624 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:56] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:29:56,641 - INFO - 127.0.0.1 - - [07/Mar/2026 18:29:56] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-07 18:30:49,112 - INFO - Reminder email sent to user 4

@@ -6,3 +6,4 @@ schedule
 pytesseract
 Pillow
 werkzeug
+cryptography

@@ -2,6 +2,7 @@ from database.db import get_connection
 from scheduler.email_service import send_email
 from tools.llm_client import call_llm
 from utils.logger import log_event
+from utils.crypto_utils import encrypt_data
 
 class ReminderAgent:
 
@@ -55,14 +56,24 @@ class ReminderAgent:
         conn = get_connection()
         cursor = conn.cursor()
 
+        # cursor.execute(
+        #     "INSERT INTO medicines (user_id, name) VALUES (?, ?)",
+        #     (user_id, medicine)
+        # )
+
+        # cursor.execute(
+        #     "INSERT INTO reminders (user_id, medicine, time) VALUES (?, ?, ?)",
+        #     (user_id, medicine, time_str)
+        # )
+
         cursor.execute(
             "INSERT INTO medicines (user_id, name) VALUES (?, ?)",
-            (user_id, medicine)
+            (user_id, encrypt_data(medicine))
         )
 
         cursor.execute(
             "INSERT INTO reminders (user_id, medicine, time) VALUES (?, ?, ?)",
-            (user_id, medicine, time_str)
+            (user_id, encrypt_data(medicine), time_str)
         )
 
         conn.commit()

@@ -2,7 +2,6 @@ from memory.session_memory import SessionMemory
 from memory.persistent_memory import PersistentMemory
 from utils.logger import log_event
 
-
 class MemoryManager:
 
     def __init__(self):

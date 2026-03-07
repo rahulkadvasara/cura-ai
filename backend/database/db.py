@@ -39,7 +39,8 @@ def init_db():
     CREATE TABLE IF NOT EXISTS reports (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         user_id INTEGER,
-        summary TEXT
+        summary TEXT,
+        hash TEXT
     )
     """)
 

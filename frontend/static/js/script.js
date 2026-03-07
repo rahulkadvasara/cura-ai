@@ -5,7 +5,10 @@ const BACKEND_URL = "http://127.0.0.1:5000";
 function register() {
     fetch(`${BACKEND_URL}/register`, {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: {
+            "Content-Type": "application/json",
+            "X-USER-ID": userId
+        },
         body: JSON.stringify({
             email: document.getElementById("email").value,
             password: document.getElementById("password").value,
@@ -26,7 +29,10 @@ function register() {
 function login() {
     fetch(`${BACKEND_URL}/login`, {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: {
+            "Content-Type": "application/json",
+            "X-USER-ID": userId
+        },
         body: JSON.stringify({
             email: document.getElementById("email").value,
             password: document.getElementById("password").value
@@ -108,7 +114,10 @@ function sendMessage() {
 
     fetch(`${BACKEND_URL}/chat`, {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: {
+            "Content-Type": "application/json",
+            "X-USER-ID": userId
+        },
         body: JSON.stringify({
             user_id: userId,
             message: message
@@ -244,6 +253,10 @@ function uploadReport() {
 
     fetch(`${BACKEND_URL}/upload`, {
         method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-USER-ID": userId
+        },
         body: formData
     })
     .then(res => res.json())
@@ -251,7 +264,10 @@ function uploadReport() {
 
         return fetch(`${BACKEND_URL}/chat`, {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
+            headers: {
+                "Content-Type": "application/json",
+                "X-USER-ID": userId
+            },
             body: JSON.stringify({
                 user_id: userId,
                 message: "Analyze this report",
@@ -334,7 +350,11 @@ function showReminders() {
 
 
 function fetchReminders() {
-    fetch(`${BACKEND_URL}/get_reminders?user_id=${userId}`)
+    fetch(`${BACKEND_URL}/get_reminders?user_id=${userId}`, {
+        headers: {
+            "X-USER-ID": userId
+        }
+    })
     .then(res => res.json())
     .then(data => {
 
@@ -374,7 +394,7 @@ function fetchReminders() {
                     </tbody>
                 </table>
             </div>
-            `;
+        `;
     });
 }
 
@@ -386,7 +406,10 @@ function getTimeBadge(time) {
 
 function deleteReminder(reminderId) {
     fetch(`${BACKEND_URL}/delete_reminder/${reminderId}`, {
-        method: "DELETE"
+        method: "DELETE",
+        headers: {
+            "X-USER-ID": userId
+        }
     })
     .then(res => res.json())
     .then(data => {
