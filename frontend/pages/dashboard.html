@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+    <h3>Cura AI</h3>
+        <button type="button" onclick="showChat()">Chat</button>
+        <button type="button" onclick="showReminders()">Reminders</button>
+
+        <button type="button" onclick="clearChat()">Clear Chat</button>
+        <button type="button" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+            <h2>Chat with Cura AI</h2>
+        </div>
+
+        <div id="chat-box" class="chat-box"></div>
+        <div id="reminder-section" class="reminder-section" style="display:none;">
+            <h3>Your Reminders</h3>
+            <div id="reminder-list"></div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="message" placeholder="Ask about symptoms, schedule reminders...">
+
+            <button class="mic-btn" onclick="startVoiceInput()">🎤</button>
+
+            <button type="button" class="send-btn" onclick="sendMessage()">Send</button>
+        </div>
+
+        <div class="upload-area">
+            <input type="file" id="reportFile">
+            <button type="button" class="upload-btn" onclick="uploadReport()">Upload</button>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="../static/js/script.js?v=2"></script>
+</body>
+</html>

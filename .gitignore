@@ -1,0 +1,13 @@
+.env
+.__pycache__
+backend/__pycache__
+backend/*/__pycache__
+/test
+.vscode
+backend/.env
+backend/venv/
+__pycache__/
+*.pyc
+backend/database/*.db
+
+backend/uploads/
