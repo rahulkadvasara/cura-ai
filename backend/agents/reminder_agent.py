@@ -66,10 +66,23 @@ class ReminderAgent:
         #     (user_id, medicine, time_str)
         # )
 
+        # cursor.execute(
+        #     "INSERT INTO medicines (user_id, name) VALUES (?, ?)",
+        #     (user_id, encrypt_data(medicine))
+        # )
+
         cursor.execute(
-            "INSERT INTO medicines (user_id, name) VALUES (?, ?)",
-            (user_id, encrypt_data(medicine))
+            "SELECT 1 FROM medicines WHERE user_id=? AND name=?",
+            (user_id, medicine)
         )
+
+        exists = cursor.fetchone()
+
+        if not exists:
+            cursor.execute(
+                "INSERT INTO medicines (user_id, name) VALUES (?, ?)",
+                (user_id, medicine)
+            )
 
         cursor.execute(
             "INSERT INTO reminders (user_id, medicine, time) VALUES (?, ?, ?)",
