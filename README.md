@@ -231,6 +231,7 @@ pip install -r requirements.txt
 Create a `.env` file inside backend:
 
 GROQ_API_KEY=your_groq_api_key_here  
+GEMINI_API_KEY=your_gemini_api_key_here  
 
 Run backend:
 
