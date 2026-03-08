@@ -1,3 +1,45 @@
+# import os
+# from dotenv import load_dotenv
+# from google import genai
+
+# load_dotenv()
+
+# API_KEY = os.getenv("GEMINI_API_KEY")
+
+# client = genai.Client(api_key=API_KEY)
+
+
+# def call_llm(messages):
+
+#     # Convert OpenAI style messages to prompt
+#     prompt = ""
+
+#     for msg in messages:
+#         role = msg.get("role")
+#         content = msg.get("content")
+
+#         if role == "system":
+#             prompt += f"{content}\n\n"
+#         elif role == "user":
+#             prompt += f"User: {content}\n"
+#         elif role == "assistant":
+#             prompt += f"Assistant: {content}\n"
+
+#     try:
+
+#         response = client.models.generate_content(
+#             model="gemini-2.0-flash",
+#             contents=prompt
+#         )
+
+#         return response.text
+
+#     except Exception as e:
+#         print("LLM ERROR:", e)
+#         return "System temporarily unavailable."
+
+
+
 import requests
 import os
 from dotenv import load_dotenv

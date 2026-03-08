@@ -56,26 +56,49 @@ The project follows a **Multi-Agent Orchestration Model**.
 ## 🧠 Memory Design
 
 ### Persistent Memory (SQLite)
-- Users (id, email, password, name)
-- Medicines
-- Reminders
+The system stores long-term user data securely using a SQLite database.
 
-### Short-Term Context
-- Stored medicines retrieved per session
-- Used for contextual reasoning and interaction checks
+Stored entities include:
+- **Users** (id, email, hashed password, name)
+- **Medicines** (encrypted medicine names associated with a user)
+- **Reminders** (scheduled medication reminders)
+- **Report Summaries** (AI-generated explanations of uploaded reports)
+
+Sensitive medical information such as medicine names is **encrypted before storage** to protect user privacy.
+
+### Short-Term Context (Session Memory)
+Short-term conversation context is maintained in memory during the user session.
+
+This includes:
+- Recent chat history
+- Current medicines taken by the user
+
+This context allows the system to perform **context-aware reasoning**, such as checking drug interactions or providing more personalized responses.
 
 ### Safety Logic
-- Drug interaction verification before database insertion
-- Conditional scheduling based on risk classification
+Cura AI includes built-in safety checks before performing actions.
+
+- **Drug interaction verification** is performed before scheduling medication reminders.
+- The system analyzes all current medicines and the new medicine being added.
+- If a **high-risk interaction** is detected, the reminder is blocked.
+- If a **moderate-risk interaction** is detected, the reminder is scheduled with a warning.
+
+These safety mechanisms help reduce the risk of unsafe medication combinations.
 
 ---
 
-## 🔐 Authentication
+## 🔐 Authentication & Security
 
-- Secure Register & Login
-- Password hashing using bcrypt
-- Multi-user support
-- Session stored via localStorage (frontend)
+Cura AI implements secure user authentication and data protection mechanisms.
+
+- **Secure Register & Login** system
+- Passwords stored using **bcrypt hashing**
+- **Multi-user support** with isolated medical data per user
+- **Access control verification** for API requests
+- **Encrypted storage** for sensitive medical data
+- **Session persistence using localStorage** on the frontend
+
+These measures ensure that sensitive healthcare information remains **private, secure, and accessible only to the authenticated user**.
 
 ---
 
@@ -98,10 +121,12 @@ The project follows a **Multi-Agent Orchestration Model**.
 ### Backend
 - Flask
 - SQLite
-- bcrypt
 - pytesseract (OCR)
 - Groq LLM API
 - Custom Multi-Agent Orchestration
+- Encryption using Fernet
+- Access control
+- Hashing using SHA256 to prevent data tempering
 
 ### Frontend
 - HTML
@@ -124,20 +149,34 @@ cura-ai/
 │   │   ├── chat_agent.py             # Handles symptom & health queries
 │   │   ├── reminder_agent.py         # Schedules reminders with safety checks
 │   │   ├── interaction_agent.py      # Performs drug interaction analysis
-│   │   └── report_agent.py           # Analyzes medical reports via OCR + LLM
+│   │   ├── report_agent.py           # Analyzes medical reports via OCR + LLM
+│   │   └── symptom_agent.py          # Provides structured symptom guidance
 │   │
 │   ├── tools/
-│   │   └── report_image_processor.py # Extracts text from report images (Tesseract OCR)
+│   │   ├── report_image_processor.py # Extracts text from report images (Tesseract OCR)
+│   │   ├── llm_client.py             # Handles LLM API communication (Groq / Gemini)
+│   │   └── rxnorm_tool.py            # Drug information lookup utility
 │   │
 │   ├── memory/
-│   │   └── memory_manager.py         # Handles user medicine memory retrieval
+│   │   ├── memory_manager.py         # Central memory controller
+│   │   ├── persistent_memory.py      # Handles long-term storage retrieval
+│   │   └── session_memory.py         # Maintains short-term conversation context
 │   │
 │   ├── database/
 │   │   └── db.py                     # SQLite database connection & schema
 │   │
+│   ├── scheduler/
+│   │   ├── email_service.py          # Sends reminder notifications
+│   │   └── reminder_scheduler.py     # Background reminder scheduler
+│   │
+│   ├── utils/
+│   │   ├── intent_classifier.py      # Detects user intent
+│   │   ├── logger.py                 # Logging utility
+│   │   ├── crypto_utils.py           # Encryption / decryption for sensitive data
+│   │   └── auth_utils.py             # Access control verification
+│   │
 │   ├── uploads/                      # Uploaded medical report images
 │   │
-│   ├── scheduler.py                  # Background reminder scheduler
 │   ├── app.py                        # Main Flask application entry point
 │   ├── requirements.txt              # Backend dependencies
 │   └── .env                          # Environment variables (API keys)
@@ -161,11 +200,13 @@ cura-ai/
 └── .gitignore                        # Ignored files
 ```
 
+---
+
 ## 🚀 Setup Instructions
 
 ### 1️⃣ Clone Repository
 
-git clone <repository-url>  
+git clone https://github.com/rahulkadvasara/cura-ai
 cd cura-ai
 
 ---
@@ -263,19 +304,6 @@ Make sure:
 
 ---
 
-## 🎯 Key Features
-
-- Multi-agent orchestration
-- Intent-based routing
-- Persistent medical memory
-- Risk-based decision gating
-- OCR-based report analysis
-- Layman-friendly explanation
-- Multi-user authentication
-- Modern chat UI
-
----
-
 ## 📄 Research Focus
 
 This project demonstrates:
@@ -301,5 +329,5 @@ This project demonstrates:
 
 ## 👨‍💻 Author
 
-Rahul Kadvasara  
+Rahul Kumar  
 B.Tech CSE (AIML)  
