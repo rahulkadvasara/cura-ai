@@ -3,6 +3,14 @@ A Safety-Aware Multi-Agent Healthcare Assistant
 
 ---
 
+## 📸 Demo
+
+![Cura AI Demo](docs/demo.png)
+
+---
+
+---
+
 ## 📌 Overview
 
 The **Cura AI** is a full-stack AI-powered system that integrates multiple intelligent agents to provide:
