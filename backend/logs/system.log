@@ -1,0 +1,239 @@
+2026-03-08 11:30:08,745 - INFO - NumExpr defaulting to 8 threads.
+2026-03-08 11:30:09,018 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-08 11:30:09,018 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-08 11:30:19,364 - INFO - 127.0.0.1 - - [08/Mar/2026 11:30:19] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 11:30:19,369 - INFO - User 4 input: I have headache
+2026-03-08 11:30:19,377 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 11:30:19,377 - INFO - Detected intent: SYMPTOM
+2026-03-08 11:30:19,378 - INFO - Routing to SymptomAgent
+2026-03-08 11:30:20,079 - INFO - Response generated successfully
+2026-03-08 11:30:20,079 - INFO - 127.0.0.1 - - [08/Mar/2026 11:30:20] "POST /chat HTTP/1.1" 200 -
+2026-03-08 11:30:37,689 - INFO - 127.0.0.1 - - [08/Mar/2026 11:30:37] "OPTIONS /upload HTTP/1.1" 200 -
+2026-03-08 11:30:37,712 - INFO - 127.0.0.1 - - [08/Mar/2026 11:30:37] "POST /upload HTTP/1.1" 200 -
+2026-03-08 11:30:37,712 - INFO - 127.0.0.1 - - [08/Mar/2026 11:30:37] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 11:30:37,728 - INFO - User 4 input: Analyze this report
+2026-03-08 11:30:37,731 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 11:30:37,731 - INFO - Detected intent: REPORT
+2026-03-08 11:30:37,731 - INFO - Routing to ReportAgent
+2026-03-08 11:30:39,297 - INFO - Response generated successfully
+2026-03-08 11:30:39,297 - INFO - 127.0.0.1 - - [08/Mar/2026 11:30:39] "POST /chat HTTP/1.1" 200 -
+2026-03-08 11:31:14,888 - INFO - 127.0.0.1 - - [08/Mar/2026 11:31:14] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 11:31:14,895 - INFO - User 4 input: Remind me to take Warfarin at 11:35 AM
+2026-03-08 11:31:14,898 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 11:31:14,898 - INFO - Detected intent: REMINDER
+2026-03-08 11:31:15,622 - INFO - Drug interaction result: Interaction Risk: High
+The repeated administration of Aspirin and Warfarin increases the risk of bleeding due to their synergistic effect on platelet aggregation and anticoagulation. This combination may lead to an increased risk of hemorrhage.
+2026-03-08 11:31:15,622 - INFO - Response generated successfully
+2026-03-08 11:31:15,622 - INFO - 127.0.0.1 - - [08/Mar/2026 11:31:15] "POST /chat HTTP/1.1" 200 -
+2026-03-08 11:31:18,618 - INFO - 127.0.0.1 - - [08/Mar/2026 11:31:18] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 11:31:18,619 - INFO - 127.0.0.1 - - [08/Mar/2026 11:31:18] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 13:58:58,029 - INFO - NumExpr defaulting to 8 threads.
+2026-03-08 13:59:00,347 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-08 13:59:00,347 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-08 13:59:20,928 - INFO - NumExpr defaulting to 8 threads.
+2026-03-08 13:59:21,627 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-08 13:59:21,627 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-08 13:59:51,668 - INFO - 127.0.0.1 - - [08/Mar/2026 13:59:51] "OPTIONS /login HTTP/1.1" 200 -
+2026-03-08 13:59:52,296 - INFO - 127.0.0.1 - - [08/Mar/2026 13:59:52] "POST /login HTTP/1.1" 200 -
+2026-03-08 14:00:28,003 - INFO - 127.0.0.1 - - [08/Mar/2026 14:00:28] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:00:28,012 - INFO - User 4 input: I have headache
+2026-03-08 14:00:28,038 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:00:28,039 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:00:28,039 - INFO - Routing to SymptomAgent
+2026-03-08 14:00:29,169 - INFO - Response generated successfully
+2026-03-08 14:00:29,170 - INFO - 127.0.0.1 - - [08/Mar/2026 14:00:29] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:01:17,564 - INFO - 127.0.0.1 - - [08/Mar/2026 14:01:17] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:01:17,572 - INFO - User 4 input: Remind me to take Warfarin at 02:05 PM
+2026-03-08 14:01:17,580 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:01:17,582 - INFO - Detected intent: REMINDER
+2026-03-08 14:01:18,664 - INFO - Drug interaction result: Interaction Risk: High
+The repeated use of Aspirin may not significantly increase the risk of interaction with Warfarin, but the combination of Aspirin and Warfarin can increase the risk of bleeding due to their synergistic effect on platelet aggregation and anticoagulation.
+2026-03-08 14:01:18,664 - INFO - Response generated successfully
+2026-03-08 14:01:18,667 - INFO - 127.0.0.1 - - [08/Mar/2026 14:01:18] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:01:33,961 - INFO - 127.0.0.1 - - [08/Mar/2026 14:01:33] "OPTIONS /upload HTTP/1.1" 200 -
+2026-03-08 14:01:33,985 - INFO - 127.0.0.1 - - [08/Mar/2026 14:01:33] "POST /upload HTTP/1.1" 200 -
+2026-03-08 14:01:34,000 - INFO - 127.0.0.1 - - [08/Mar/2026 14:01:34] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:01:34,009 - INFO - User 4 input: Analyze this report
+2026-03-08 14:01:34,014 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:01:34,014 - INFO - Detected intent: REPORT
+2026-03-08 14:01:34,014 - INFO - Routing to ReportAgent
+2026-03-08 14:01:38,456 - INFO - Response generated successfully
+2026-03-08 14:01:38,472 - INFO - 127.0.0.1 - - [08/Mar/2026 14:01:38] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:01:44,408 - INFO - 127.0.0.1 - - [08/Mar/2026 14:01:44] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 14:01:44,425 - INFO - 127.0.0.1 - - [08/Mar/2026 14:01:44] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 14:12:01,842 - INFO - 127.0.0.1 - - [08/Mar/2026 14:12:01] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:12:01,854 - INFO - User 4 input: I have chest pain
+2026-03-08 14:12:01,858 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:12:01,858 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:12:01,858 - INFO - Routing to SymptomAgent
+2026-03-08 14:12:03,300 - INFO - Response generated successfully
+2026-03-08 14:12:03,300 - INFO - 127.0.0.1 - - [08/Mar/2026 14:12:03] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:13:03,121 - INFO - 127.0.0.1 - - [08/Mar/2026 14:13:03] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:13:03,131 - INFO - User 4 input: I have headache
+2026-03-08 14:13:03,134 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:13:03,134 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:13:03,134 - INFO - Routing to SymptomAgent
+2026-03-08 14:13:08,591 - INFO - Response generated successfully
+2026-03-08 14:13:08,591 - INFO - 127.0.0.1 - - [08/Mar/2026 14:13:08] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:13:27,333 - INFO - NumExpr defaulting to 8 threads.
+2026-03-08 14:13:28,171 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-08 14:13:28,171 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-08 14:13:40,364 - INFO - 127.0.0.1 - - [08/Mar/2026 14:13:40] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:13:40,376 - INFO - User 4 input: I have headache
+2026-03-08 14:13:40,383 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:13:40,383 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:13:40,383 - INFO - Routing to SymptomAgent
+2026-03-08 14:13:41,561 - INFO - Response generated successfully
+2026-03-08 14:13:41,563 - INFO - 127.0.0.1 - - [08/Mar/2026 14:13:41] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:14:06,056 - INFO - 127.0.0.1 - - [08/Mar/2026 14:14:06] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:14:06,066 - INFO - User 4 input: I have headache
+2026-03-08 14:14:06,072 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:14:06,072 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:14:06,072 - INFO - Routing to SymptomAgent
+2026-03-08 14:14:07,420 - INFO - Response generated successfully
+2026-03-08 14:14:07,420 - INFO - 127.0.0.1 - - [08/Mar/2026 14:14:07] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:14:15,753 - INFO - NumExpr defaulting to 8 threads.
+2026-03-08 14:14:16,432 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-08 14:14:16,432 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-08 14:14:25,913 - INFO - 127.0.0.1 - - [08/Mar/2026 14:14:25] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:14:25,925 - INFO - User 4 input: I have headache
+2026-03-08 14:14:25,934 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:14:25,934 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:14:25,937 - INFO - Routing to SymptomAgent
+2026-03-08 14:14:27,494 - INFO - Response generated successfully
+2026-03-08 14:14:27,494 - INFO - 127.0.0.1 - - [08/Mar/2026 14:14:27] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:15:13,202 - INFO - 127.0.0.1 - - [08/Mar/2026 14:15:13] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:15:13,214 - INFO - User 4 input: I have headache
+2026-03-08 14:15:13,219 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:15:13,219 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:15:13,219 - INFO - Routing to SymptomAgent
+2026-03-08 14:15:14,166 - INFO - Response generated successfully
+2026-03-08 14:15:14,169 - INFO - 127.0.0.1 - - [08/Mar/2026 14:15:14] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:17:56,609 - INFO - 127.0.0.1 - - [08/Mar/2026 14:17:56] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:17:56,621 - INFO - User 4 input: I have headache
+2026-03-08 14:17:56,625 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:17:56,625 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:17:56,625 - INFO - Routing to SymptomAgent
+2026-03-08 14:17:57,607 - INFO - Response generated successfully
+2026-03-08 14:17:57,607 - INFO - 127.0.0.1 - - [08/Mar/2026 14:17:57] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:18:06,018 - INFO - NumExpr defaulting to 8 threads.
+2026-03-08 14:18:06,711 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-08 14:18:06,711 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-08 14:18:18,572 - INFO - 127.0.0.1 - - [08/Mar/2026 14:18:18] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:18:18,585 - INFO - User 4 input: I have headache
+2026-03-08 14:18:18,595 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:18:18,597 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:18:18,597 - INFO - Routing to SymptomAgent
+2026-03-08 14:18:19,572 - INFO - Response generated successfully
+2026-03-08 14:18:19,576 - INFO - 127.0.0.1 - - [08/Mar/2026 14:18:19] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:19:30,299 - INFO - 127.0.0.1 - - [08/Mar/2026 14:19:30] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:19:30,314 - INFO - User 4 input: I have headache
+2026-03-08 14:19:30,317 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:19:30,317 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:19:30,317 - INFO - Routing to SymptomAgent
+2026-03-08 14:19:31,336 - INFO - Response generated successfully
+2026-03-08 14:19:31,343 - INFO - 127.0.0.1 - - [08/Mar/2026 14:19:31] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:20:08,015 - INFO - 127.0.0.1 - - [08/Mar/2026 14:20:08] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:20:08,023 - INFO - User 4 input: Hii
+2026-03-08 14:20:08,023 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:20:09,089 - INFO - Detected intent: CHAT
+2026-03-08 14:20:09,089 - INFO - Routing to ChatAgent
+2026-03-08 14:20:10,016 - INFO - Response generated successfully
+2026-03-08 14:20:10,016 - INFO - 127.0.0.1 - - [08/Mar/2026 14:20:10] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:20:19,655 - INFO - 127.0.0.1 - - [08/Mar/2026 14:20:19] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:20:19,668 - INFO - User 4 input: I have headache
+2026-03-08 14:20:19,671 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:20:19,673 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:20:19,673 - INFO - Routing to SymptomAgent
+2026-03-08 14:20:20,602 - INFO - Response generated successfully
+2026-03-08 14:20:20,602 - INFO - 127.0.0.1 - - [08/Mar/2026 14:20:20] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:20:58,067 - INFO - 127.0.0.1 - - [08/Mar/2026 14:20:58] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:20:58,077 - INFO - User 4 input: Remind me to take Warfarin at 2:25 PM
+2026-03-08 14:20:58,083 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:20:58,083 - INFO - Detected intent: REMINDER
+2026-03-08 14:20:59,128 - INFO - Drug interaction result: Interaction Risk: High
+The repeated use of Aspirin and Warfarin increases the risk of bleeding due to their synergistic effect on platelet aggregation and anticoagulation. This combination may lead to an increased risk of hemorrhage.
+2026-03-08 14:20:59,128 - INFO - Response generated successfully
+2026-03-08 14:20:59,128 - INFO - 127.0.0.1 - - [08/Mar/2026 14:20:59] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:21:09,827 - INFO - 127.0.0.1 - - [08/Mar/2026 14:21:09] "OPTIONS /upload HTTP/1.1" 200 -
+2026-03-08 14:21:09,849 - INFO - 127.0.0.1 - - [08/Mar/2026 14:21:09] "POST /upload HTTP/1.1" 200 -
+2026-03-08 14:21:09,859 - INFO - 127.0.0.1 - - [08/Mar/2026 14:21:09] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:21:09,864 - INFO - User 4 input: Analyze this report
+2026-03-08 14:21:09,864 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:21:09,864 - INFO - Detected intent: REPORT
+2026-03-08 14:21:09,864 - INFO - Routing to ReportAgent
+2026-03-08 14:21:12,571 - INFO - Response generated successfully
+2026-03-08 14:21:12,571 - INFO - 127.0.0.1 - - [08/Mar/2026 14:21:12] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:22:13,653 - INFO - 127.0.0.1 - - [08/Mar/2026 14:22:13] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 14:22:13,661 - INFO - 127.0.0.1 - - [08/Mar/2026 14:22:13] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 14:41:06,759 - INFO - 127.0.0.1 - - [08/Mar/2026 14:41:06] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 14:41:06,773 - INFO - 127.0.0.1 - - [08/Mar/2026 14:41:06] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 14:43:25,691 - INFO - 127.0.0.1 - - [08/Mar/2026 14:43:25] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 14:43:25,711 - INFO - 127.0.0.1 - - [08/Mar/2026 14:43:25] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 14:43:41,718 - INFO - 127.0.0.1 - - [08/Mar/2026 14:43:41] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:43:41,729 - INFO - User 4 input: I have stomach ache
+2026-03-08 14:43:41,732 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:43:43,035 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:43:43,035 - INFO - Routing to SymptomAgent
+2026-03-08 14:43:43,968 - INFO - Response generated successfully
+2026-03-08 14:43:43,968 - INFO - 127.0.0.1 - - [08/Mar/2026 14:43:43] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:44:00,024 - INFO - 127.0.0.1 - - [08/Mar/2026 14:44:00] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 14:44:00,033 - INFO - User 4 input: I have blood cancer
+2026-03-08 14:44:00,041 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 14:44:00,958 - INFO - Detected intent: SYMPTOM
+2026-03-08 14:44:00,958 - INFO - Routing to SymptomAgent
+2026-03-08 14:44:01,973 - INFO - Response generated successfully
+2026-03-08 14:44:01,973 - INFO - 127.0.0.1 - - [08/Mar/2026 14:44:01] "POST /chat HTTP/1.1" 200 -
+2026-03-08 14:44:09,204 - INFO - 127.0.0.1 - - [08/Mar/2026 14:44:09] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 14:44:09,216 - INFO - 127.0.0.1 - - [08/Mar/2026 14:44:09] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 15:10:13,663 - INFO - 127.0.0.1 - - [08/Mar/2026 15:10:13] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 15:10:13,685 - INFO - 127.0.0.1 - - [08/Mar/2026 15:10:13] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 15:10:31,424 - INFO - 127.0.0.1 - - [08/Mar/2026 15:10:31] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 15:10:31,443 - INFO - 127.0.0.1 - - [08/Mar/2026 15:10:31] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 15:11:08,344 - INFO - 127.0.0.1 - - [08/Mar/2026 15:11:08] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 15:11:08,351 - INFO - User 4 input: I have back pain
+2026-03-08 15:11:08,357 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 15:11:08,357 - INFO - Detected intent: SYMPTOM
+2026-03-08 15:11:08,357 - INFO - Routing to SymptomAgent
+2026-03-08 15:11:09,305 - INFO - Response generated successfully
+2026-03-08 15:11:09,305 - INFO - 127.0.0.1 - - [08/Mar/2026 15:11:09] "POST /chat HTTP/1.1" 200 -
+2026-03-08 15:11:33,399 - INFO - 127.0.0.1 - - [08/Mar/2026 15:11:33] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 15:11:33,408 - INFO - User 4 input: I'm having heart problem. Seviour pain in chest
+2026-03-08 15:11:33,416 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 15:11:33,416 - INFO - Detected intent: SYMPTOM
+2026-03-08 15:11:33,416 - INFO - Routing to SymptomAgent
+2026-03-08 15:11:34,352 - INFO - Response generated successfully
+2026-03-08 15:11:34,368 - INFO - 127.0.0.1 - - [08/Mar/2026 15:11:34] "POST /chat HTTP/1.1" 200 -
+2026-03-08 15:11:47,652 - INFO - 127.0.0.1 - - [08/Mar/2026 15:11:47] "OPTIONS /upload HTTP/1.1" 200 -
+2026-03-08 15:11:47,682 - INFO - 127.0.0.1 - - [08/Mar/2026 15:11:47] "POST /upload HTTP/1.1" 200 -
+2026-03-08 15:11:47,695 - INFO - 127.0.0.1 - - [08/Mar/2026 15:11:47] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 15:11:47,701 - INFO - User 4 input: Analyze this report
+2026-03-08 15:11:47,708 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 15:11:47,708 - INFO - Detected intent: REPORT
+2026-03-08 15:11:47,708 - INFO - Routing to ReportAgent
+2026-03-08 15:11:50,354 - INFO - Response generated successfully
+2026-03-08 15:11:50,356 - INFO - 127.0.0.1 - - [08/Mar/2026 15:11:50] "POST /chat HTTP/1.1" 200 -
+2026-03-08 15:11:59,937 - INFO - 127.0.0.1 - - [08/Mar/2026 15:11:59] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 15:11:59,945 - INFO - 127.0.0.1 - - [08/Mar/2026 15:11:59] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 15:12:16,030 - INFO - 127.0.0.1 - - [08/Mar/2026 15:12:16] "OPTIONS /delete_reminder/41 HTTP/1.1" 200 -
+2026-03-08 15:12:16,058 - INFO - 127.0.0.1 - - [08/Mar/2026 15:12:16] "DELETE /delete_reminder/41 HTTP/1.1" 200 -
+2026-03-08 15:12:16,067 - INFO - 127.0.0.1 - - [08/Mar/2026 15:12:16] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 15:12:16,083 - INFO - 127.0.0.1 - - [08/Mar/2026 15:12:16] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 15:12:45,796 - INFO - 127.0.0.1 - - [08/Mar/2026 15:12:45] "OPTIONS /chat HTTP/1.1" 200 -
+2026-03-08 15:12:45,806 - INFO - User 4 input: Remind me for Dispirin at 9:30
+2026-03-08 15:12:45,813 - INFO - Memory fetched for user 4 | Medicines: ['Aspirin', 'Aspirin', 'Warfarin']
+2026-03-08 15:12:45,815 - INFO - Detected intent: REMINDER
+2026-03-08 15:12:46,887 - INFO - Drug interaction result: Interaction Risk: Moderate
+
+The interaction between Aspirin and Warfarin is moderate due to the increased risk of bleeding, as both medications can inhibit platelet aggregation and prolong bleeding time. Dispirin is a generic or brand name of Aspirin, so it will have the same interaction with Warfarin.
+2026-03-08 15:12:46,887 - INFO - Moderate interaction detected, scheduling with warning.
+2026-03-08 15:12:46,915 - INFO - Response generated successfully
+2026-03-08 15:12:46,915 - INFO - 127.0.0.1 - - [08/Mar/2026 15:12:46] "POST /chat HTTP/1.1" 200 -
+2026-03-08 15:38:10,796 - INFO - 127.0.0.1 - - [08/Mar/2026 15:38:10] "OPTIONS /get_reminders?user_id=4 HTTP/1.1" 200 -
+2026-03-08 15:38:10,813 - INFO - 127.0.0.1 - - [08/Mar/2026 15:38:10] "GET /get_reminders?user_id=4 HTTP/1.1" 200 -

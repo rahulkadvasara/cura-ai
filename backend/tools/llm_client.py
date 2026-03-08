@@ -11,7 +11,6 @@
 
 # def call_llm(messages):
 
-#     # Convert OpenAI style messages to prompt
 #     prompt = ""
 
 #     for msg in messages:

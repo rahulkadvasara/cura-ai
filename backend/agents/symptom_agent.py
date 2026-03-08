@@ -18,17 +18,11 @@ class SymptomAgent:
 
                         Symptom: <short name>
 
-                        Causes:
-                        - 3–4 brief bullet points only
-
                         Urgency:
-                        - Low or Moderate or High
+                        Low or Moderate or High
 
                         Actions:
                         - 2–3 short practical steps
-
-                        Emergency:
-                        - 1 line on when to seek immediate medical care
 
                         Keep responses concise.
                         Use simple patient-friendly language.
