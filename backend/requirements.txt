@@ -9,3 +9,4 @@ werkzeug
 cryptography
 google-genai
 gunicorn
+bcrypt
