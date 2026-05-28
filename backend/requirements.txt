@@ -8,3 +8,4 @@ Pillow
 werkzeug
 cryptography
 google-genai
+gunicorn
